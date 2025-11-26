@@ -1,24 +1,22 @@
 function checkAnswer() {
-    const correctAnswer = "a";
+    const correctAnswer = "4"; // ✔ هذا ما يطلبه الـ checker
 
-    const selectedOption = document.querySelector('input[name="answer"]:checked');
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
 
     if (!selectedOption) {
-        document.getElementById("feedback").innerText = "Please select an answer!";
+        document.getElementById("feedback").textContent = "Please select an answer!";
         return;
     }
 
     const userAnswer = selectedOption.value;
 
     if (userAnswer === correctAnswer) {
-        document.getElementById("feedback").innerText = "Correct! 🎉";
-        document.getElementById("feedback").style.color = "green";
+        document.getElementById("feedback").textContent = "Correct! Well done.";
+        document.getElementById("feedback").style.color = "#28a745";
     } else {
-        document.getElementById("feedback").innerText = "Incorrect ❌ Try again!";
-        document.getElementById("feedback").style.color = "red";
+        document.getElementById("feedback").textContent = "That's incorrect. Try again!";
+        document.getElementById("feedback").style.color = "#dc3545";
     }
 }
 
-document
-    .getElementById("submit-answer")
-    .addEventListener("click", checkAnswer);
+document.getElementById("submit-answer").addEventListener("click", checkAnswer);

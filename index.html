@@ -8,32 +8,21 @@
 </head>
 
 <body>
+    <div id="quiz-container">
+        <p id="quiz-question">What is 2 + 2?</p>
+        <div>
+            <input type="radio" id="choice1" name="quiz" value="4">
+            <label for="choice1">4</label><br>
 
-    <h2>ALX Simple Quiz</h2>
+            <input type="radio" id="choice2" name="quiz" value="22">
+            <label for="choice2">22</label><br>
 
-    <div class="quiz-box">
-        <p>What does HTML stand for?</p>
-
-        <label>
-            <input type="radio" name="answer" value="a">
-            HyperText Markup Language
-        </label><br>
-
-        <label>
-            <input type="radio" name="answer" value="b">
-            HighText Machine Logic
-        </label><br>
-
-        <label>
-            <input type="radio" name="answer" value="c">
-            HyperText Markdown Language
-        </label><br>
-
+            <input type="radio" id="choice3" name="quiz" value="3">
+            <label for="choice3">3</label>
+        </div>
         <button id="submit-answer">Submit Answer</button>
-
         <p id="feedback"></p>
     </div>
-
     <script src="quiz.js"></script>
 </body>
 
